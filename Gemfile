@@ -55,6 +55,7 @@ end
 group :production do
   gem 'rails_12factor'
   gem 'pg'
+  gem 'heroku-deflater'
 end
 
 # Ruby version for Heroku to know what to do because it's stupid
