@@ -8,8 +8,14 @@ group :development, :test do
   gem 'sqlite3'
 end
 
+# Use Haml for Template files
+gem 'haml'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
+
+# Use Twitter Bootstrap for layouting
+gem 'bootstrap-sass', '~> 3.0.3.0'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
