@@ -19,16 +19,3 @@ body {
 .show-grid [class^="col-"] {
   border: 1px solid #ddd;
 }
-.first-column, .second-column, .third-column, .fourth-column {
-  height: 300px;
-}
-.fifth-column, .sixth-column {
-  height: 150px;
-}
-.column-within {
-  height: 50%;
-  
-  & [class^="col-"] {
-    height: 100%;
-  }
-}
