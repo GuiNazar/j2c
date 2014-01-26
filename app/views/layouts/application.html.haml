@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>J2c</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
-</html>
+!!!
+%html
+  %head
+    %title J2C
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    = render partial: 'header'
+    .container
+      .row.off-canvas.off-canvas-left
+        = render partial: 'left_nav'
+        .col-xs-12.col-sm-9
+          = yield
