@@ -24,3 +24,7 @@ $(document).ready ->
     text.css('display', 'block')
     text.removeClass('editing')
     $(this).remove()
+    
+  $(document).on 'keyup', 'input.editor', (e) ->
+    if e.keyCode == 13
+      $(this).trigger("blur")
