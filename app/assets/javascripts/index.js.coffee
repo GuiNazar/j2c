@@ -18,5 +18,9 @@ $(document).ready ->
     
   $(document).on 'blur', 'input.editor', (e) ->
     value = $(this).val()
-    $(this).siblings('.editing').text(value).css('display', 'block').removeClass('editing')
+    text = $(this).siblings('.editing')
+    if (value != '')
+      text.text(value)
+    text.css('display', 'block')
+    text.removeClass('editing')
     $(this).remove()
