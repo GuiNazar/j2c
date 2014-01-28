@@ -15,6 +15,9 @@ class CanvasesController < ApplicationController
   # GET /canvases/new
   def new
     @canvas = Canvas.new
+    (1..8).each do
+      @canvas.subjects << Subject.new
+    end
   end
 
   # GET /canvases/1/edit
@@ -69,6 +72,6 @@ class CanvasesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def canvas_params
-      params.require(:canvas).permit(:title)
+      params.require(:canvas).permit(:title, subjects_attributes: [:id, :title, :takeaway, :_destroy])
     end
 end

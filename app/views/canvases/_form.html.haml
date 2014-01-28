@@ -1,13 +1,27 @@
-= form_for @canvas do |f|
+= nested_form_for @canvas do |f|
   - if @canvas.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@canvas.errors.count, "error")} prohibited this canvas from being saved:"
-      %ul
-        - @canvas.errors.full_messages.each do |msg|
-          %li= msg
+    .row
+      .col-xs-12
+        #error_explanation
+          %h2= "#{pluralize(@canvas.errors.count, "error")} prohibited this canvas from being saved:"
+          %ul
+            - @canvas.errors.full_messages.each do |msg|
+              %li= msg
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .actions
-    = f.submit 'Save'
+  .row
+    .col-xs-12
+      .field
+        = f.text_field :title, placeholder: "Titulo do Canvas"
+        
+  .row
+    .col-xs-12
+      Assuntos:
+      = f.fields_for :subjects do |s|
+        .row
+          .col-xs-12
+            .field
+              = s.text_field :title, placeholder: "Titulo do Assunto #{s.index+1}"
+  .row
+    .col-xs-12
+      .actions
+        = f.submit 'Save'

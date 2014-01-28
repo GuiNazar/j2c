@@ -14,10 +14,10 @@
       %td= subject.title
       %td= subject.takeaway
       %td= subject.canvas
-      %td= link_to 'Show', subject
-      %td= link_to 'Edit', edit_subject_path(subject)
-      %td= link_to 'Destroy', subject, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %td= link_to 'Show', canvas_subject_path(@canvas, subject)
+      %td= link_to 'Edit', edit_canvas_subject_path(@canvas, subject)
+      %td= link_to 'Destroy', canvas_subject_path(@canvas, subject), :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
-= link_to 'New Subject', new_subject_path
+= link_to 'New Subject', new_canvas_subject_path(@canvas)

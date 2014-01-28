@@ -1,8 +1,14 @@
 %p#notice= notice
-
-%p
-  %b Title:
-  = @canvas.title
+.row.canvas-title
+  .col-xs-12
+    %h2
+      = @canvas.title
+.row.canvas.show-grid
+  .col-xs-12
+    .row
+      - @canvas.subjects.each do |sub|
+        .col-sm-3.first-column.slide
+          
 
 = link_to 'Edit', edit_canvas_path(@canvas)
 \|

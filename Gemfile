@@ -12,6 +12,9 @@ end
 gem 'haml'
 gem 'haml-rails'
 
+# Use Nested Form for nested forms... lol
+gem 'nested_form'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

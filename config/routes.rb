@@ -1,9 +1,11 @@
 J2c::Application.routes.draw do
-  resources :bullets
-
-  resources :subjects
-
-  resources :canvases
+  
+  resources :canvases do
+    resources :subjects do
+      resources :bullets
+    end
+  end
+  
 
   root 'canvases#new'
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,15 +1,11 @@
-%p#notice= notice
-
-%p
-  %b Title:
-  = @subject.title
-%p
-  %b Takeaway:
-  = @subject.takeaway
-%p
-  %b Canvas:
-  = @subject.canvas
-
-= link_to 'Edit', edit_subject_path(@subject)
-\|
-= link_to 'Back', subjects_path
+.row
+  .col-xs-9.title
+    %h4 
+      = @subject.title
+  .col-xs-3.edit
+    = link_to 'Edit', edit_subject_path(@subject)
+.row
+  .col-xs-12.content
+    %ul.list-group
+      %li.list-group-item
+        = @subject.takeaway
