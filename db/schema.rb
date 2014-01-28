@@ -11,12 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140128155708) do
+ActiveRecord::Schema.define(version: 20140128160703) do
+
+  create_table "bullets", force: true do |t|
+    t.string   "text"
+    t.integer  "subject_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bullets", ["subject_id"], name: "index_bullets_on_subject_id"
 
   create_table "canvases", force: true do |t|
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "subjects", force: true do |t|
+    t.string   "title"
+    t.string   "takeaway"
+    t.integer  "canvas_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "subjects", ["canvas_id"], name: "index_subjects_on_canvas_id"
 
 end
