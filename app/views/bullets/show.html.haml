@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Text:
+  = @bullet.text
+%p
+  %b Subject:
+  = @bullet.subject
+
+= link_to 'Edit', edit_bullet_path(@bullet)
+\|
+= link_to 'Back', bullets_path

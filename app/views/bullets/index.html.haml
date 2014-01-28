@@ -1,0 +1,21 @@
+%h1 Listing bullets
+
+%table
+  %tr
+    %th Text
+    %th Subject
+    %th
+    %th
+    %th
+
+  - @bullets.each do |bullet|
+    %tr
+      %td= bullet.text
+      %td= bullet.subject
+      %td= link_to 'Show', bullet
+      %td= link_to 'Edit', edit_bullet_path(bullet)
+      %td= link_to 'Destroy', bullet, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Bullet', new_bullet_path

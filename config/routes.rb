@@ -1,4 +1,6 @@
 J2c::Application.routes.draw do
+  resources :bullets
+
   resources :subjects
 
   resources :canvases
