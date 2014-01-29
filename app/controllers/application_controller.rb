@@ -14,7 +14,10 @@ class ApplicationController < ActionController::Base
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_agenda
-      @agendas = params[:agendas]
+      @agendas = []
+      params[:agendas].each do |agenda|
+        @agendas << OpenStruct.new(agenda[1])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

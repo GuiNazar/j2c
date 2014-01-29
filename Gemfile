@@ -1,3 +1,5 @@
+# Ruby version for Heroku to know what to do because it's stupid
+ruby "2.0.0"
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -15,7 +17,7 @@ gem 'haml'
 gem 'sass-rails', '~> 4.0.0'
 
 # Use Twitter Bootstrap for layouting
-gem 'bootstrap-sass', '~> 3.0.3.0'
+gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass.git'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -57,6 +59,3 @@ group :production do
   gem 'pg'
   gem 'heroku-deflater'
 end
-
-# Ruby version for Heroku to know what to do because it's stupid
-ruby "2.0.0"

@@ -2,25 +2,25 @@
   .col-xs-12
     .row
       .col-sm-3.first-column.slide
-        = render partial: 'slide'
+        = render partial: 'slide', locals:{agenda: @agendas[0]}
       .col-sm-3.second-column
         .row.column-within
           .col-xs-12.slide
-            = render partial: 'slide'
+            = render partial: 'slide', locals:{agenda: @agendas[1]}
         .row.column-within
           .col-xs-12.slide
-            = render partial: 'slide'
+            = render partial: 'slide', locals:{agenda: @agendas[2]}
       .col-sm-3.third-column
         .row.column-within
           .col-xs-12.slide
-            = render partial: 'slide'
+            = render partial: 'slide', locals:{agenda: @agendas[3]}
         .row.column-within
           .col-xs-12.slide
-            = render partial: 'slide'
+            = render partial: 'slide', locals:{agenda: @agendas[4]}
       .col-sm-3.fourth-column.slide
-        = render partial: 'slide'
+        = render partial: 'slide', locals:{agenda: @agendas[5]}
     .row
       .col-xs-6.fifth-column.slide
-        = render partial: 'slide'
+        = render partial: 'slide', locals:{agenda: @agendas[6]}
       .col-xs-6.sixth-column.slide
-        = render partial: 'slide'
+        = render partial: 'slide', locals:{agenda: @agendas[7]}

@@ -1,18 +1,41 @@
-.row{style: "background-color: green;padding-top: 10px;padding-bottom:10px;"}
+.row
   .col-xs-12.text-center
     %h2 Defina a Agenda da reunião
     = form_tag '/index', method: :get do
       .row
         .col-xs-12
           .field
-            = text_field_tag 'agendas[0].title', nil, placeholder: 'Título do Assunto 1'
+            = text_field_tag 'agendas[0][title]', nil, placeholder: 'Título do Assunto 1'
       .row
         .col-xs-12
           .field
-            = text_field_tag 'agendas[1].title', nil, placeholder: 'Título do Assunto 2'
-            
+            = text_field_tag 'agendas[1][title]', nil, placeholder: 'Título do Assunto 2'
       .row
         .col-xs-12
           .field
-            = submit_tag
+            = text_field_tag 'agendas[2][title]', nil, placeholder: 'Título do Assunto 3'
+      .row
+        .col-xs-12
+          .field
+            = text_field_tag 'agendas[3][title]', nil, placeholder: 'Título do Assunto 4'
+      .row
+        .col-xs-12
+          .field
+            = text_field_tag 'agendas[4][title]', nil, placeholder: 'Título do Assunto 5'
+      .row
+        .col-xs-12
+          .field
+            = text_field_tag 'agendas[5][title]', nil, placeholder: 'Título do Assunto 6'
+      .row
+        .col-xs-12
+          .field
+            = text_field_tag 'agendas[6][title]', nil, placeholder: 'Título do Assunto 7'
+      .row
+        .col-xs-12
+          .field
+            = text_field_tag 'agendas[7][title]', nil, placeholder: 'Título do Assunto 8'
+      .row
+        .col-xs-12
+          .field
+            = submit_tag 'Enviar', class: 'btn btn-primary'
       
