@@ -5,9 +5,14 @@
       .row
         .col-xs-12
           .field
-            = text_field_tag 'agendas[0]', nil, placeholder: 'Título do Assunto 1'
+            = text_field_tag 'agendas[0].title', nil, placeholder: 'Título do Assunto 1'
       .row
         .col-xs-12
           .field
-            = text_field_tag 'agendas[1]', nil, placeholder: 'Título do Assunto 2'
+            = text_field_tag 'agendas[1].title', nil, placeholder: 'Título do Assunto 2'
+            
+      .row
+        .col-xs-12
+          .field
+            = submit_tag
       

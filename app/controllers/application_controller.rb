@@ -19,6 +19,6 @@ class ApplicationController < ActionController::Base
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
-      params.require(:canvas).permit(:title, subjects_attributes: [:id, :title, :takeaway, :_destroy])
+      params.require(:agendas).permit(:title)
     end
 end
