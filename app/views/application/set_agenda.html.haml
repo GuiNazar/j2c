@@ -1,0 +1,13 @@
+.row{style: "background-color: green;padding-top: 10px;padding-bottom:10px;"}
+  .col-xs-12.text-center
+    %h2 Defina a Agenda da reunião
+    = form_tag '/index', method: :get do
+      .row
+        .col-xs-12
+          .field
+            = text_field_tag 'agendas[0]', nil, placeholder: 'Título do Assunto 1'
+      .row
+        .col-xs-12
+          .field
+            = text_field_tag 'agendas[1]', nil, placeholder: 'Título do Assunto 2'
+      
