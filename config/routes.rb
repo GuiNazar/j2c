@@ -1,6 +1,6 @@
 J2c::Application.routes.draw do
   get ':action', to: 'application#:action', as: 'action'
-  root 'application#index'
+  root 'application#define_agenda'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

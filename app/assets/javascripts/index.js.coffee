@@ -10,7 +10,7 @@ $(document).ready ->
     e.preventDefault()
     $(this).parents('li.list-group-item').remove()
     
-  $(document).on 'click', '.title h4, .list-group-item .text', (e) ->
+  $(document).on 'click', '.title h4, .list-group-item .text, .takeaway .text', (e) ->
     text = $(this).text()
     textfield = $('<input type="text" autofocus="true" class="editor" value="' + text + '" />')
     $(this).addClass('editing').after(textfield)
