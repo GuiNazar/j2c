@@ -4,7 +4,7 @@
     %title J2C
     = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     = csrf_meta_tags
-  %body
+  %body{class: controller.controller_name}
     = render partial: 'layouts/header'
     .container
       .row.off-canvas.off-canvas-left

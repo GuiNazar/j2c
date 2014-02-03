@@ -1,12 +1,12 @@
 = content_for :inner_left_nav do
   %h1= @canvas.title
+  .edit-canvas
+    = link_to 'Edit', edit_canvas_path(@canvas)
+    \|
+    = link_to 'Back', canvases_path
 
 %p#notice= notice
 
 %p
   %b Title:
   = @canvas.title
-
-= link_to 'Edit', edit_canvas_path(@canvas)
-\|
-= link_to 'Back', canvases_path
