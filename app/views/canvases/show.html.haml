@@ -8,8 +8,6 @@
   .blocks
     = render "blocks/index", object: @blocks = @canvas.blocks
 
-%p#notice= notice
-
-%p
-  %b Title:
-  = @canvas.title
+.canvas
+  .row
+    = render "canvas_template"

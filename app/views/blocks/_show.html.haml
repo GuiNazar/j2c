@@ -1,0 +1,12 @@
+.block
+  .row
+    .col-xs-12.title
+      = @block.title
+    .col-xs-12.keypoints
+      
+    .col-xs-12.takeaway
+      = @block.takeaway
+
+= link_to 'Edit', edit_block_path(@block)
+\|
+= link_to 'Back', blocks_path
