@@ -6,7 +6,7 @@
     = link_to 'Back', canvases_path
     
   .blocks
-    = render "blocks"
+    = render "blocks/index", object: @blocks = @canvas.blocks
 
 %p#notice= notice
 

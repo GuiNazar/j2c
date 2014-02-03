@@ -67,7 +67,7 @@ class CanvasesController < ApplicationController
     def set_canvas
       @canvas = Canvas.first || Canvas.create
     end
-
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def canvas_params
       params.require(:canvas).permit(:title)
