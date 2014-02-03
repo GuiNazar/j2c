@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @canvas.title
+
+= link_to 'Edit', edit_canvas_path(@canvas)
+\|
+= link_to 'Back', canvases_path
