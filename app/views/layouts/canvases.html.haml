@@ -1,0 +1,7 @@
+= content_for :left_nav do
+  = yield :inner_left_nav
+  
+= content_for :content do
+  = yield
+  
+= render template: "layouts/application"
