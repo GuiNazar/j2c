@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @block.title
+%p
+  %b Takeaway:
+  = @block.takeaway
+%p
+  %b Canvas:
+  = @block.canvas
+
+= link_to 'Edit', edit_block_path(@block)
+\|
+= link_to 'Back', blocks_path
