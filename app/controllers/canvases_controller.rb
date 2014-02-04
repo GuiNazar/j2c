@@ -1,6 +1,6 @@
 class CanvasesController < ApplicationController
 #  before_action :set_canvas, only: [:show, :edit, :update, :destroy]
-  before_action :set_canvas, only: [:show, :edit, :update]
+  before_action :set_canvas
   
   # GET /canvases/1
   # GET /canvases/1.json
@@ -10,13 +10,20 @@ class CanvasesController < ApplicationController
   # GET /canvases/1/edit
   def edit
   end
+  
+  # GET /canvases/1/refresh
+  def refresh
+    respond_to do |format|
+      format.js
+    end
+  end
 
   # PATCH/PUT /canvases/1
   # PATCH/PUT /canvases/1.json
   def update
     respond_to do |format|
       if @canvas.update(canvas_params)
-        format.js {}
+        format.js
       else
         format.html { render action: 'edit' }
       end

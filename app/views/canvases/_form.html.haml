@@ -1,2 +1,2 @@
-= form_for @canvas, remote: true do |f|
-  = f.text_field :title, placeholder: 'Inserir Título da apresentação'
+= form_for @canvas, remote: true, html:{class: "xhr-editting"} do |f|
+  = f.text_field :title, placeholder: 'Inserir Título da apresentação', autofocus: true

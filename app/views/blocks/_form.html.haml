@@ -1,2 +1,2 @@
-= form_for @block, remote: true do |f|
-  = f.text_field @attr, autofocus: true
+= form_for @block, remote: true, html:{class: "xhr-editting"} do |f|
+  = f.text_field @attr, autofocus: true, placeholder: "Inserir #{@attr}"

@@ -6,9 +6,6 @@ class BlocksController < ApplicationController
   # GET /blocks/new
   def new
     @block = Block.new
-    @block.points << Point.new
-    @block.points << Point.new
-    @block.points << Point.new
     @canvas.blocks << @block
     
     respond_to do |format|
@@ -54,7 +51,6 @@ class BlocksController < ApplicationController
     @block.destroy
     respond_to do |format|
       format.html { redirect_to :root }
-      format.js
     end
   end
 
@@ -62,16 +58,6 @@ class BlocksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_block
       @block = Block.find(params[:id])
-      if @block.points.length == 0
-        @block.points << Point.new
-        @block.points << Point.new
-        @block.points << Point.new
-      elsif @block.points.length == 1
-        @block.points << Point.new
-        @block.points << Point.new
-      elsif @block.points.length == 2
-        @block.points << Point.new
-      end
     end
     
     def set_canvas

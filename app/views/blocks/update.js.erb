@@ -1,5 +1,9 @@
-block = $('<%= escape_javascript(render "blocks/block") %>');
-$('#sidebar .blocks .block-<%= @block.id %>').html(block);
+title = $('<%= escape_javascript(render "blocks/title") %>');
+$('span.editable.block-<%= @block.id %>-title').replaceWith(title);
 
-canvas = $('<%= escape_javascript(render "canvases/canvas_template") %>');
-$('.canvas#canvas').html(canvas);
+takeaway = $('<%= escape_javascript(render "blocks/takeaway") %>');
+$('span.editable.block-<%= @block.id %>-takeaway').replaceWith(takeaway);
+
+$('form#edit_block_<%= @block.id %>').remove()
+$('.editting').css('display', 'block')
+$('.editting').removeClass('editting')

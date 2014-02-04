@@ -1,2 +1,6 @@
 title = $('<%= escape_javascript(render "canvases/title") %>');
-$('.canvas-title').html(title);
+$('.canvas-title h1.editting').replaceWith(title);
+
+$('form#edit_canvas_<%= @canvas.id %>').remove()
+$('.editting').css('display', 'block')
+$('.editting').removeClass('editting')

@@ -20,10 +20,18 @@ body.canvases {
         color: #666;
       }
       
-      & form.edit_canvas {
-        font-size: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
+      & form.xhr-editting {
+        margin-top: -12px;
+        margin-bottom: 9px;
+        
+        input {
+          border: none;
+          text-align: center;
+          width: 100%;
+          font-size: 36px;
+          padding: 0px;
+          font-weight: 500;
+        }
       }
     }
     .blocks {
@@ -67,8 +75,33 @@ body.canvases {
             }
           }
         }
-        .takeaway{
-          font-size: 11px;
+        .title{
+          & form.xhr-editting {
+            margin-bottom: 0px;
+            
+            input {
+              text-align: center;
+              width: 100%;
+              padding: 0px;
+              font-size: 14px;
+              border: none;
+            }
+          }
+          .takeaway{
+            font-size: 11px;
+            
+            & form.xhr-editting {
+              margin-bottom: 0px;
+            
+              input {
+                text-align: center;
+                width: 100%;
+                padding: 0px;
+                font-size: 11px;
+                border: none;
+              }
+            }
+          }
         }
         .delete-btn, .move-up-btn {
           position: absolute;

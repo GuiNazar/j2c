@@ -1,6 +1,6 @@
 .row.title
   .col-xs-12.text-center
-    %h3.editable{data:{controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'title'}}= @block.formatted_title
+    %h3= render "blocks/title"
 
 .row.keypoints
   .col-xs-12
@@ -15,4 +15,4 @@
   
 .row.takeaway
   .col-xs-12.text-center
-    %h2.editable{ data:{ controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'takeaway' } }= @block.formatted_takeaway
+    %h2= render "blocks/takeaway"

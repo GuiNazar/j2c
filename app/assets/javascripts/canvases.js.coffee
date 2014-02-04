@@ -4,11 +4,14 @@
 
 $(document).ready ->
   $(document).on 'click', '.editable', (e) ->
-    controller = $(this).attr('data-controller')
-    id = $(this).attr('data-object-id')
-    action = $(this).attr('data-action')
-    attribute = $(this).attr('data-attribute')
+    url = $(this).attr('data-url')
     $(this).addClass('editting')
-    $.getScript(controller + '/' + id + '/' + action + '?attribute=' + attribute)
+    $.getScript(url)
     
-#  $(document).on 'blur', '. 
+  $(document).on 'hide.bs.modal', '#myModal', (e) ->
+     $.getScript('canvases/refresh')
+     
+  $(document).on 'blur', 'form.xhr-editting input', (e) ->
+    form = $(this).parents('form')
+    form.siblings('.editting').css('display','block').removeClass('editting')
+    form.remove()

@@ -5,7 +5,9 @@ J2c::Application.routes.draw do
     get 'edit_attributes', as: 'edit_attributes', on: :member
   end
 
-  resources :canvases
+  resources :canvases do
+    get 'refresh', as: 'refresh', on: :collection
+  end
 
   root 'canvases#show'
 end
