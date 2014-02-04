@@ -5,7 +5,7 @@ class Canvas < ActiveRecord::Base
   
   def create_block
     if self.blocks.length == 0
-      self.blocks << Block.create
+      self.blocks << Block.create(index: 1)
     end
   end
 end
