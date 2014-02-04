@@ -6,5 +6,8 @@
         .col-xs-12.takeaway.editable{data:{controller: 'blocks', object_id: block.id, action: 'edit', attribute: 'takeaway'}}= block.takeaway
     - if @blocks.length > 1
       .delete-btn
-        = link_to block, method: :delete, data: { :confirm => 'Tem certeza?' } do
+        = link_to block, method: :delete do
           %span.glyphicon.glyphicon-remove
+    .move-up-btn
+      = link_to :root do
+        %span.glyphicon.glyphicon-arrow-up

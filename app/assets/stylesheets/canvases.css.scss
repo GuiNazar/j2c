@@ -37,6 +37,9 @@ body.canvases {
           .delete-btn {
             border-top-left-radius: 5px;
           }
+          .move-up-btn {
+            border-top-right-radius: 5px;
+          }
         }
         &:last-child {
           border-bottom-right-radius: 5px;
@@ -45,9 +48,12 @@ body.canvases {
           .delete-btn {
             border-bottom-left-radius: 5px;
           }
+          .move-up-btn {
+            border-bottom-right-radius: 5px;
+          }
         }
         &:hover {
-          .delete-btn {
+          .delete-btn, .move-up-btn {
             opacity: 1;
             
             a {
@@ -58,7 +64,7 @@ body.canvases {
         .takeaway{
           font-size: 11px;
         }
-        .delete-btn {
+        .delete-btn, .move-up-btn {
           position: absolute;
           opacity: 0;
           background: rgba(0,0,0,0.5);
@@ -68,6 +74,9 @@ body.canvases {
           line-height: 31px;
           
           @include transition-duration(.25s);
+        }
+        .move-up-btn {
+          right: 0px;
         }
       }
     }
