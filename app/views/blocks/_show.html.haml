@@ -1,7 +1,7 @@
 = link_to edit_block_path(@block), class: "block-link", remote: true, data: {toggle: "modal", target: "#myModal"} do
   .row.title
     .col-xs-12
-      %h2= @block.title
+      %h2= @block.formatted_title
   .row.keypoints
     .col-xs-10.col-xs-offset-1.points
       %ul

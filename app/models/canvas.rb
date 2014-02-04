@@ -3,6 +3,10 @@ class Canvas < ActiveRecord::Base
   
   before_create :create_block
   
+  def formatted_title
+    self.title.blank? ? "Inserir título" : self.title
+  end
+  
   def create_block
     if self.blocks.length == 0
       self.blocks << Block.create(position: 1)

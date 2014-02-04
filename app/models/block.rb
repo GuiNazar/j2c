@@ -4,6 +4,14 @@ class Block < ActiveRecord::Base
   
   before_create :define_position
   
+  def formatted_title
+    self.title.blank? ? "Inserir título do bloco" : self.title
+  end
+  
+  def formatted_takeaway
+    self.takeaway.blank? ? "Inserir take-away" : self.takeaway
+  end
+  
   def define_position
     self.position = (Block.maximum(:position) || 0) + 1
   end

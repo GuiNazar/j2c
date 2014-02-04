@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204075718) do
+ActiveRecord::Schema.define(version: 20140204211324) do
 
   create_table "blocks", force: true do |t|
-    t.string   "title",      default: "Untitled Block"
+    t.string   "title"
     t.string   "takeaway"
     t.integer  "canvas_id"
     t.datetime "created_at"
@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20140204075718) do
   add_index "blocks", ["canvas_id"], name: "index_blocks_on_canvas_id"
 
   create_table "canvases", force: true do |t|
-    t.string   "title",      default: "Untitled"
+    t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
