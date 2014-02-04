@@ -8,5 +8,7 @@ $(document).ready ->
     id = $(this).attr('data-object-id')
     action = $(this).attr('data-action')
     attribute = $(this).attr('data-attribute')
-    $(this).addClass('just-got-editted')
+    $(this).addClass('editting')
     $.getScript(controller + '/' + id + '/' + action + '?attribute=' + attribute)
+    
+#  $(document).on 'blur', '. 

@@ -1,0 +1,5 @@
+form = $('<%= escape_javascript(render "form") %>');
+content = $('.editting');
+content.after(form)
+content.css('display', 'none');
+content.removeClass('editting');

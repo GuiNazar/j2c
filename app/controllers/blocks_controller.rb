@@ -27,7 +27,7 @@ class BlocksController < ApplicationController
   def edit_attributes
     respond_to do |format|
       format.html { render 'edit', layout: false }
-      format.js {}
+      format.js
     end
   end
 
@@ -36,7 +36,7 @@ class BlocksController < ApplicationController
   def update
     respond_to do |format|
       if @block.update(block_params)
-        format.html { redirect_to :root, notice: 'Block was successfully updated.' }
+        format.js
       else
         format.html { render action: 'edit' }
       end
@@ -54,7 +54,7 @@ class BlocksController < ApplicationController
     @block.destroy
     respond_to do |format|
       format.html { redirect_to :root }
-      format.js {}
+      format.js
     end
   end
 

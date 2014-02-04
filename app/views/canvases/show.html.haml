@@ -1,6 +1,6 @@
 = content_for :inner_left_nav do
-  = link_to edit_canvas_path(@canvas), class: "canvas-title" do
-    %h1= @canvas.title
+  .canvas-title
+    = render "title"
     
   .blocks
     = render "blocks/index", object: @blocks = @canvas.blocks
@@ -11,5 +11,5 @@
         = link_to new_block_path, class: "btn btn-primary" do
           %span.glyphicon.glyphicon-plus
 
-.canvas
+.canvas#canvas
   = render "canvas_template"

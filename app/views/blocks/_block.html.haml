@@ -1,0 +1,4 @@
+.col-xs-12.title
+  %span.editable{data:{controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'title'}}= @block.title
+  .row
+    .col-xs-12.takeaway.editable{data:{controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'takeaway'}}= @block.takeaway

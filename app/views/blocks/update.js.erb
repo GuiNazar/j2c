@@ -1,0 +1,5 @@
+block = $('<%= escape_javascript(render "blocks/block") %>');
+$('#sidebar .blocks .block-<%= @block.id %>').html(block);
+
+canvas = $('<%= escape_javascript(render "canvases/canvas_template") %>');
+$('.canvas#canvas').html(canvas);

@@ -19,6 +19,12 @@ body.canvases {
         text-decoration: none;
         color: #666;
       }
+      
+      & form.edit_canvas {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
     }
     .blocks {
       .block {

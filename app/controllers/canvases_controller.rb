@@ -16,7 +16,7 @@ class CanvasesController < ApplicationController
   def update
     respond_to do |format|
       if @canvas.update(canvas_params)
-        format.html { redirect_to :root, notice: 'Canvas was successfully updated.' }
+        format.js {}
       else
         format.html { render action: 'edit' }
       end
