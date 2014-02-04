@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "bootstrap";
+
 body.canvases {
   #sidebar {
     .canvas-title {
@@ -19,10 +21,6 @@ body.canvases {
       };
     }
     .blocks {
-      .add-block {
-        text-align: center;
-        margin-top: 10px;
-      }
       .block {
         background: #357ebd;
         color: white;
@@ -30,6 +28,7 @@ body.canvases {
         padding-top: 5px;
         padding-bottom: 5px;
         text-align: center;
+        position: relative;
         
         &:first-child {
           border-top-right-radius: 5px;
@@ -39,10 +38,34 @@ body.canvases {
           border-bottom-right-radius: 5px;
           border-bottom-left-radius: 5px;
         }
+        &:hover {
+          .delete-btn {
+            opacity: 1;
+            
+            a {
+              display: block;
+            }
+          }
+        }
         .takeaway{
           font-size: 11px;
         }
+        .delete-btn {
+          position: absolute;
+          opacity: 0;
+          background: rgba(0,0,0,0.5);
+          width: 40px;
+          top: 0px;
+          bottom: 0px;
+          line-height: 31px;
+          
+          @include transition-duration(.25s);
+        }
       }
+    }
+    .add-block {
+      text-align: center;
+      margin-top: 10px;
     }
   }
 }
