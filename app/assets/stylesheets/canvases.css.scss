@@ -17,37 +17,24 @@ body.canvases {
         text-align: center;
         margin-top: 10px;
       }
-      .block{
-        background: #e9e9e9;
+      .block {
+        background: #357ebd;
+        color: white;
         margin-bottom: 2px;
         padding-top: 5px;
         padding-bottom: 5px;
         text-align: center;
         
+        &:first-child {
+          border-top-right-radius: 5px;
+          border-top-left-radius: 5px;
+        }
+        &:last-child {
+          border-bottom-right-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
         .takeaway{
           font-size: 11px;
-        }
-      }
-    }
-  }
-  .canvas {
-    .block {
-      border: 1px solid #a1a1a1;
-      
-      a.block-link {
-        display: block;
-        color: black;
-        overflow: hidden;
-        
-        .title {
-          text-align: center;
-        }
-        .keypoints {
-          height: 300px;
-        }
-        .takeaway {
-          text-align: center;
-          background: #eee;
         }
       }
     }

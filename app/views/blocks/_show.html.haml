@@ -1,11 +1,10 @@
-.block
-  = link_to edit_block_path(@block), class: "block-link" do
-    .row.title
-      .col-xs-12
-        %h2= @block.title
-    .row.keypoints
-      .col-xs-12
-      
-    .row.takeaway
-      .col-xs-12
-        %h3= @block.takeaway
+= link_to edit_block_path(@block), class: "block-link" do
+  .row.title
+    .col-xs-12
+      %h2= @block.title
+  .row.keypoints
+    .col-xs-12
+    
+  .row.takeaway
+    .col-xs-12
+      %h3= @block.takeaway
