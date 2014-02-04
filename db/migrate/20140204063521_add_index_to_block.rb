@@ -1,5 +1,5 @@
 class AddIndexToBlock < ActiveRecord::Migration
   def change
-    add_column :blocks, :index, :integer
+    add_column :blocks, :position, :integer
   end
 end

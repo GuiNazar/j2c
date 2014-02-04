@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20140204063521) do
     t.integer  "canvas_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "index"
+    t.integer  "position"
   end
 
   add_index "blocks", ["canvas_id"], name: "index_blocks_on_canvas_id"
