@@ -1,4 +1,4 @@
-form = $('<%= escape_javascript(render "form_#{@attribute}") %>');
+form = $('<%= escape_javascript(render "form", object: @attr = @attribute) %>');
 content = $('.just-got-editted');
 content.after(form)
 content.css('display', 'none');

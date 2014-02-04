@@ -5,8 +5,12 @@
 
 body.canvases {
   .canvas {
+    border-radius: 10px;
+    overflow: hidden;
+    
     .block {
-      border: 1px solid #a1a1a1;
+      background: #ebebeb;
+      border: 1px solid #fff;
       
       &.block-1 {
         width: 100%;
@@ -14,10 +18,6 @@ body.canvases {
       &.block-2 {
         width: 50%;
         float: left;
-        
-        &:last-child {
-          border-left: none;
-        };
       }
       &.block-3 {
         width: 34%;
@@ -25,27 +25,14 @@ body.canvases {
         
         &.bl-1 {
           width: 33%;
-          border-right: none;
         };
         &.bl-3 {
           width: 33%;
-          border-left: none;
         };
       }
       &.block-4 {
         width: 50%;
         float:left;
-        
-        &.bl-1 {
-          border-right: none;
-          border-bottom: none;
-        }
-        &.bl-2 {
-          border-bottom: none;
-        }
-        &.bl-3 {
-          border-right: none;
-        }
         
         .block-link {
           .title {
@@ -66,23 +53,18 @@ body.canvases {
         
         &.bl-1 {
           width: 33%;
-          border-right: none;
         }
         &.bl-2 {
           width: 34%;
         }
         &.bl-3 {
           width: 33%;
-          border-left: none;
         }
         &.bl-4 {
           width: 50%;
-          border-right: none;
-          border-top: none;
         }
         &.bl-5 {
           width: 50%;
-          border-top: none;
         }
         
         .block-link {
@@ -104,28 +86,21 @@ body.canvases {
         
         &.bl-1 {
           width: 33%;
-          border-right: none;
         }
         &.bl-2 {
           width: 34%;
         }
         &.bl-3 {
           width: 33%;
-          border-left: none;
         }
         &.bl-4 {
           width: 33%;
-          border-right: none;
-          border-top: none;
         }
         &.bl-5 {
           width: 34%;
-          border-top: none;
         }
         &.bl-6 {
           width: 33%;
-          border-top: none;
-          border-left: none;
         }
         
         .block-link {
@@ -147,32 +122,24 @@ body.canvases {
         
         &.bl-1 {
           width: 25%;
-          border-right: none;
         }
         &.bl-2 {
           width: 25%;
-          border-right: none;
         }
         &.bl-3 {
           width: 25%;
-          border-right: none;
         }
         &.bl-4 {
           width: 25%;
         }
         &.bl-5 {
           width: 33%;
-          border-top: none;
-          border-right: none;
         }
         &.bl-6 {
           width: 34%;
-          border-top: none;
         }
         &.bl-7 {
           width: 33%;
-          border-top: none;
-          border-left: none;
         }
         
         .block-link {
@@ -194,37 +161,27 @@ body.canvases {
         
         &.bl-1 {
           width: 25%;
-          border-right: none;
         }
         &.bl-2 {
           width: 25%;
-          border-right: none;
         }
         &.bl-3 {
           width: 25%;
-          border-right: none;
         }
         &.bl-4 {
           width: 25%;
         }
         &.bl-5 {
           width: 25%;
-          border-top: none;
-          border-right: none;
         }
         &.bl-6 {
           width: 25%;
-          border-top: none;
-          border-right: none;
         }
         &.bl-7 {
           width: 25%;
-          border-top: none;
-          border-right: none;
         }
         &.bl-8 {
           width: 25%;
-          border-top: none;
         }
         
         .block-link {
@@ -246,42 +203,30 @@ body.canvases {
         
         &.bl-1 {
           width: 33%;
-          border-right: none;
         }
         &.bl-2 {
           width: 34%;
         }
         &.bl-3 {
           width: 33%;
-          border-left: none;
         }
         &.bl-4 {
           width: 33%;
-          border-right: none;
-          border-top: none;
         }
         &.bl-5 {
           width: 34%;
-          border-top: none;
         }
         &.bl-6 {
           width: 33%;
-          border-top: none;
-          border-left: none;
         }
         &.bl-7 {
           width: 33%;
-          border-right: none;
-          border-top: none;
         }
         &.bl-8 {
           width: 34%;
-          border-top: none;
         }
         &.bl-9 {
           width: 33%;
-          border-top: none;
-          border-left: none;
         }
         
         .block-link {
@@ -303,23 +248,36 @@ body.canvases {
         display: block;
         color: black;
         overflow: hidden;
-        @include transition-duration(.25s);
-        
-        &:hover {
-          background: rgba(0,0,0,0.1);
-        }
+        padding: 10px;
         
         .title {
           text-align: center;
+          
+          h2 {
+            margin-top: 0px;
+          }
         }
         .keypoints {
-          height: 300px;
+          height: 280px;
+          margin-bottom: 10px;
           
+          .points {
+            background: #fff;
+            height: inherit;
+            border-radius: 5px;
+            padding-top: 10px;
+            padding-left: 0px;
+          }
         }
         .takeaway {
           text-align: center;
-          background: #eee;
-          min-height: 35px;
+          
+          .text {
+            background: #428bca;
+            color: white;
+            min-height: 39px;
+            border-radius: 5px;
+          }
         }
       }
     }
