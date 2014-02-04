@@ -20,28 +20,12 @@ class PointsController < ApplicationController
     
     respond_to do |format|
       format.html { redirect_to :root }
-      format.js { render "keypoints_modified" }
+      format.js { render "block_details" }
     end
   end
 
   # GET /points/1/edit
   def edit
-  end
-
-  # POST /points
-  # POST /points.json
-  def create
-    @point = Point.new(point_params)
-
-    respond_to do |format|
-      if @point.save
-        format.html { redirect_to @point, notice: 'Point was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @point }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @point.errors, status: :unprocessable_entity }
-      end
-    end
   end
 
   # PATCH/PUT /points/1
@@ -63,7 +47,7 @@ class PointsController < ApplicationController
     @point.destroy
     respond_to do |format|
       format.html { redirect_to :root }
-      format.js { render "keypoints_modified" }
+      format.js { render "block_details" }
     end
   end
 

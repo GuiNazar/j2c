@@ -17,7 +17,7 @@ class BlocksController < ApplicationController
   def edit
     respond_to do |format|
       format.html { render 'edit', layout: false }
-      format.js {}
+      format.js { render "block_details" }
     end
   end
 
@@ -25,22 +25,6 @@ class BlocksController < ApplicationController
     respond_to do |format|
       format.html { render 'edit', layout: false }
       format.js {}
-    end
-  end
-
-  # POST /blocks
-  # POST /blocks.json
-  def create
-    @block = Block.new(block_params)
-
-    respond_to do |format|
-      if @block.save
-        format.html { redirect_to @block, notice: 'Block was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @block }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @block.errors, status: :unprocessable_entity }
-      end
     end
   end
 
