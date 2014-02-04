@@ -10,27 +10,3 @@ $(document).ready ->
     attribute = $(this).attr('data-attribute')
     $(this).addClass('just-got-editted')
     $.getScript(controller + '/' + id + '/' + action + '?attribute=' + attribute)
-
-#    text = $(this).text()
-#    fluidtextfield = $('<input type="text" autofocus="true" class="editor" value="' + text + '" />')
-#    $(this).addClass('editing').after(fluidtextfield)
-#    $(this).css('display', 'none')
-    
-#  $(document).on 'blur', 'input.editor', (e) ->
-#    value = $(this).val()
-#    text = $(this).siblings('.editing')
-#    if (value != '')
-#      text.text(value)
-#    text.css('display', 'block')
-#    text.removeClass('editing')
-#    $(this).remove()
-    
-  $(document).on 'keyup', 'input.editor', (e) ->
-    if e.keyCode == 13
-      value = $(this).val()
-      text = $(this).siblings('.editing')
-      if (value != '')
-        text.text(value)
-      text.css('display', 'block')
-      text.removeClass('editing')
-      $(this).remove()
