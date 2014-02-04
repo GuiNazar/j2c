@@ -1,0 +1,5 @@
+form = $('<%= escape_javascript(render "form_#{@attribute}") %>');
+content = $('.just-got-editted');
+content.after(form)
+content.css('display', 'none');
+content.removeClass('just-got-editted')

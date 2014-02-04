@@ -1,6 +1,6 @@
 class BlocksController < ApplicationController
   before_action :set_block, only: [:show, :edit, :update, :destroy]
-
+  before_action :which_attribute, only: [:edit]
   # GET /blocks
   # GET /blocks.json
   def index
@@ -19,6 +19,10 @@ class BlocksController < ApplicationController
 
   # GET /blocks/1/edit
   def edit
+    respond_to do |format|
+      format.html { render 'edit' }
+      format.js {}
+    end
   end
 
   # POST /blocks
@@ -65,6 +69,10 @@ class BlocksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_block
       @block = Block.find(params[:id])
+    end
+    
+    def which_attribute
+      @attribute = params[:attribute].to_s
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

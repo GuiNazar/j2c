@@ -1,7 +1,6 @@
 - @blocks.each do |block|
   .row.block
     .col-xs-12.title
-      = block.title
+      %span.editable{data:{controller: 'blocks', object_id: block.id, action: 'edit', attribute: 'title'}}= block.title
       .row
-        .col-xs-12.takeaway
-          = block.takeaway
+        .col-xs-12.takeaway.editable{data:{controller: 'blocks', object_id: block.id, action: 'edit', attribute: 'takeaway'}}= block.takeaway
