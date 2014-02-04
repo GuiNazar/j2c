@@ -1,6 +1,7 @@
 // Place all the styles related to the Blocks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap";
 
 body.canvases {
   .canvas {
@@ -302,6 +303,11 @@ body.canvases {
         display: block;
         color: black;
         overflow: hidden;
+        @include transition-duration(.25s);
+        
+        &:hover {
+          background: rgba(0,0,0,0.1);
+        }
         
         .title {
           text-align: center;

@@ -13,4 +13,5 @@
         .col-xs-12.col-sm-9
           = content_for?(:content) ? yield(:content) : yield
 
+    = render ("myModal")
     = javascript_include_tag "application", "data-turbolinks-track" => true      
