@@ -2,16 +2,6 @@ class BlocksController < ApplicationController
   before_action :set_canvas
   before_action :set_block, only: [:show, :edit, :edit_attributes, :update, :destroy, :move_up]
   before_action :which_attribute, only: [:edit_attributes]
-  # GET /blocks
-  # GET /blocks.json
-  def index
-    @blocks = Block.all
-  end
-
-  # GET /blocks/1
-  # GET /blocks/1.json
-  def show
-  end
 
   # GET /blocks/new
   def new
@@ -60,10 +50,8 @@ class BlocksController < ApplicationController
     respond_to do |format|
       if @block.update(block_params)
         format.html { redirect_to :root, notice: 'Block was successfully updated.' }
-        format.json { head :no_content }
       else
         format.html { render action: 'edit' }
-        format.json { render json: @block.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -79,7 +67,7 @@ class BlocksController < ApplicationController
     @block.destroy
     respond_to do |format|
       format.html { redirect_to :root }
-      format.json { head :no_content }
+      format.js {}
     end
   end
 
