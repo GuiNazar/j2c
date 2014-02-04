@@ -38,7 +38,7 @@ body.canvases {
             border-top-left-radius: 5px;
           }
           .move-up-btn {
-            border-top-right-radius: 5px;
+            display: none;
           }
         }
         &:last-child {
