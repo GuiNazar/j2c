@@ -1,13 +1,9 @@
 = content_for :inner_left_nav do
-  %h1= @canvas.title
-  .edit-canvas
-    = link_to 'Edit', edit_canvas_path(@canvas)
-    \|
-    = link_to 'Back', canvases_path
+  = link_to edit_canvas_path(@canvas), class: "canvas-title" do
+    %h1= @canvas.title
     
   .blocks
     = render "blocks/index", object: @blocks = @canvas.blocks
 
 .canvas
-  .row
-    = render "canvas_template"
+  = render "canvas_template"

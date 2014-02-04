@@ -7,13 +7,10 @@
           %li= msg
 
   .field
-    = f.label :title
     = f.text_field :title
   .field
-    = f.label :takeaway
     = f.text_field :takeaway
   .field
-    = f.label :canvas
-    = f.text_field :canvas
+    = f.hidden_field :canvas
   .actions
-    = f.submit 'Save'
+    = f.submit 'Save', class: "btn btn-primary"

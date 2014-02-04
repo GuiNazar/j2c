@@ -30,32 +30,6 @@
       margin-bottom: 10px;
     }
   }
-  .content {
-    .list-group-item {
-      .editor { 
-        width: 120px;
-        margin-top: 0px;
-        height: 18px;
-        font-size: 11px;
-        display: block;
-      }
-      .badge {
-        a {
-          color: white;
-        }
-      }
-    }
-  }
-}
-.fifth-column, .sixth-column {
-  height: 150px;
-}
-.column-within {
-  height: 50%;
-  
-  & [class^="col-"] {
-    height: 100%;
-  }
 }
 .field {
   padding-top: 10px;
@@ -63,6 +37,7 @@
   
   input[type="text"] {
     border: 1px solid #aaa;
-    border-radius: 5px;
+    border-radius: 0px;
+    padding: 5px;
   }
 }

@@ -4,8 +4,48 @@
 
 body.canvases {
   #sidebar {
-    .edit-canvas {
-      font-size: 10px;
+    .canvas-title {
+      text-align: center;
+      color: black;
+      &:hover {
+        text-decoration: none;
+        color: #666;
+      };
+    }
+    .blocks {
+      .block{
+        background: #e9e9e9;
+        border-bottom: 2px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+        
+        .takeaway{
+          font-size: 11px;
+        }
+      }
+    }
+  }
+  .canvas {
+    .block {
+      border: 1px solid #a1a1a1;
+      
+      a.block-link {
+        display: block;
+        color: black;
+        overflow: hidden;
+        
+        .title {
+          text-align: center;
+        }
+        .keypoints {
+          height: 300px;
+        }
+        .takeaway {
+          text-align: center;
+          background: #eee;
+        }
+      }
     }
   }
 }
