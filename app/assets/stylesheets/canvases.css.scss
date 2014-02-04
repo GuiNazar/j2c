@@ -18,7 +18,7 @@ body.canvases {
       &:hover {
         text-decoration: none;
         color: #666;
-      };
+      }
     }
     .blocks {
       .block {
@@ -33,10 +33,18 @@ body.canvases {
         &:first-child {
           border-top-right-radius: 5px;
           border-top-left-radius: 5px;
+          
+          .delete-btn {
+            border-top-left-radius: 5px;
+          }
         }
         &:last-child {
           border-bottom-right-radius: 5px;
           border-bottom-left-radius: 5px;
+          
+          .delete-btn {
+            border-bottom-left-radius: 5px;
+          }
         }
         &:hover {
           .delete-btn {
