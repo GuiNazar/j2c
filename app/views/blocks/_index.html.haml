@@ -4,3 +4,8 @@
       %span.editable{data:{controller: 'blocks', object_id: block.id, action: 'edit', attribute: 'title'}}= block.title
       .row
         .col-xs-12.takeaway.editable{data:{controller: 'blocks', object_id: block.id, action: 'edit', attribute: 'takeaway'}}= block.takeaway
+
+- if @blocks.length < 9
+  .row.add-block
+    .col-xs-12
+      = link_to '+', new_block_path, class: "btn btn-primary"

@@ -1,4 +1,5 @@
 class BlocksController < ApplicationController
+  before_action :set_canvas
   before_action :set_block, only: [:show, :edit, :update, :destroy]
   before_action :which_attribute, only: [:edit]
   # GET /blocks
@@ -15,6 +16,11 @@ class BlocksController < ApplicationController
   # GET /blocks/new
   def new
     @block = Block.new
+    @canvas.blocks << @block
+    
+    respond_to do |format|
+      format.html { redirect_to :root }
+    end
   end
 
   # GET /blocks/1/edit
@@ -69,6 +75,10 @@ class BlocksController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_block
       @block = Block.find(params[:id])
+    end
+    
+    def set_canvas
+      @canvas = Canvas.first
     end
     
     def which_attribute
