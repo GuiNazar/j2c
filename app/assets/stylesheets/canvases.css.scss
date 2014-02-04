@@ -7,6 +7,12 @@ body.canvases {
     .canvas-title {
       text-align: center;
       color: black;
+      
+      h1 {
+        margin-top: 0px;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
       &:hover {
         text-decoration: none;
         color: #666;
