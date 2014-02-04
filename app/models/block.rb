@@ -1,5 +1,6 @@
 class Block < ActiveRecord::Base
   belongs_to :canvas
+  has_many :points
   
   before_create :define_position
   

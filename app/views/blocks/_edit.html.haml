@@ -1,0 +1,18 @@
+.row.title
+  .col-xs-12.text-center
+    %h2.editable{data:{controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'title'}}= @block.title
+
+.row.keypoints
+  .col-xs-12
+    -@block.points.each do |point|
+      .keypoint
+        = render "points/form", object: [@block = @block, @point = point]
+    -if @block.points.length < 3
+      .row.add-block
+        .col-xs-12.text-center
+          = link_to new_block_point_path(@block), remote: true, class: "btn btn-primary" do
+            %span.glyphicon.glyphicon-plus
+  
+.row.takeaway
+  .col-xs-12.text-center
+    %h5.editable{ data:{ controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'takeaway' } }= @block.takeaway || "Takeaway"

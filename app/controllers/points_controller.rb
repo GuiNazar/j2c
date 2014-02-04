@@ -1,5 +1,6 @@
 class PointsController < ApplicationController
   before_action :set_point, only: [:show, :edit, :update, :destroy]
+  before_action :set_block, only: [:new, :edit, :update, :destroy]
 
   # GET /points
   # GET /points.json
@@ -14,7 +15,13 @@ class PointsController < ApplicationController
 
   # GET /points/new
   def new
-    @point = Point.new
+    @point = Point.create
+    @block.points << @point
+    
+    respond_to do |format|
+      format.html { redirect_to :root }
+      format.js { render "keypoints_modified" }
+    end
   end
 
   # GET /points/1/edit
@@ -42,8 +49,7 @@ class PointsController < ApplicationController
   def update
     respond_to do |format|
       if @point.update(point_params)
-        format.html { redirect_to @point, notice: 'Point was successfully updated.' }
-        format.json { head :no_content }
+        format.js {}
       else
         format.html { render action: 'edit' }
         format.json { render json: @point.errors, status: :unprocessable_entity }
@@ -56,8 +62,8 @@ class PointsController < ApplicationController
   def destroy
     @point.destroy
     respond_to do |format|
-      format.html { redirect_to points_url }
-      format.json { head :no_content }
+      format.html { redirect_to :root }
+      format.js { render "keypoints_modified" }
     end
   end
 
@@ -65,6 +71,10 @@ class PointsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_point
       @point = Point.find(params[:id])
+    end
+    
+    def set_block
+      @block = Block.find(params[:block_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

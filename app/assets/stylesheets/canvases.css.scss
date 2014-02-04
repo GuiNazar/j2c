@@ -85,4 +85,30 @@ body.canvases {
       margin-top: 10px;
     }
   }
+  
+  .modal-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    
+    .keypoints {
+      .keypoint {
+        background: #eee;
+        display: block;
+        overflow: hidden;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        
+        .keypoint-content {
+          resize: none;
+          width: 100%;
+          border-radius: 5px;
+          border: 1px solid #ddd;
+        }
+        .btn-primary, .btn-danger{
+          margin-top: 5px;
+        }
+      }
+    }
+  }
 }

@@ -1,16 +1,10 @@
-= form_for @point do |f|
-  - if @point.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@point.errors.count, "error")} prohibited this point from being saved:"
-      %ul
-        - @point.errors.full_messages.each do |msg|
-          %li= msg
-
-  .field
-    = f.label :content
-    = f.text_area :content
-  .field
-    = f.label :block
-    = f.text_field :block
-  .actions
-    = f.submit 'Save'
+.col-xs-10
+  = form_for [@block, @point], remote: true do |f|
+    .row
+      .col-xs-10
+        = f.text_area :content, class: "keypoint-content"
+      .col-xs-2
+        = f.submit 'Save', class: "btn btn-primary"
+.col-xs-2
+  = link_to block_point_path(@block, @point), method: :delete, remote: true, class: "btn btn-danger" do
+    %span.glyphicon.glyphicon-minus

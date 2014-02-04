@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140204063521) do
+ActiveRecord::Schema.define(version: 20140204075718) do
 
   create_table "blocks", force: true do |t|
     t.string   "title",      default: "Untitled Block"
@@ -29,5 +29,14 @@ ActiveRecord::Schema.define(version: 20140204063521) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "points", force: true do |t|
+    t.text     "content"
+    t.integer  "block_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "points", ["block_id"], name: "index_points_on_block_id"
 
 end

@@ -1,7 +1,7 @@
 class BlocksController < ApplicationController
   before_action :set_canvas
-  before_action :set_block, only: [:show, :edit, :update, :destroy, :move_up]
-  before_action :which_attribute, only: [:edit]
+  before_action :set_block, only: [:show, :edit, :edit_attributes, :update, :destroy, :move_up]
+  before_action :which_attribute, only: [:edit_attributes]
   # GET /blocks
   # GET /blocks.json
   def index
@@ -25,6 +25,13 @@ class BlocksController < ApplicationController
 
   # GET /blocks/1/edit
   def edit
+    respond_to do |format|
+      format.html { render 'edit', layout: false }
+      format.js {}
+    end
+  end
+
+  def edit_attributes
     respond_to do |format|
       format.html { render 'edit', layout: false }
       format.js {}

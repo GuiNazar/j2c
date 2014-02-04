@@ -1,10 +1,14 @@
-= link_to edit_block_path(@block), class: "block-link", data: {toggle: "modal", target: "#myModal"} do
+= link_to edit_block_path(@block), class: "block-link", remote: true, data: {toggle: "modal", target: "#myModal"} do
   .row.title
     .col-xs-12
       %h2= @block.title
+
   .row.keypoints
     .col-xs-12
-    
+      %ul
+        - @block.points.each do |point|
+          %li= point.content
+      
   .row.takeaway
     .col-xs-12
       %h5= @block.takeaway
