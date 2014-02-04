@@ -26,7 +26,7 @@ class BlocksController < ApplicationController
   # GET /blocks/1/edit
   def edit
     respond_to do |format|
-      format.html { render 'edit' }
+      format.html { render 'edit', layout: false }
       format.js {}
     end
   end

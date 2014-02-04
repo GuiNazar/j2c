@@ -1,5 +1,10 @@
-%h1 Editing block
+.row.title
+  .col-xs-12.text-center
+    %h2.editable{data:{controller: 'blocks', object_id: @block.id, action: 'edit', attribute: 'title'}}= @block.title
 
-= render 'form'
-%br
-= link_to 'Back', :root
+.row.keypoints
+  .col-xs-12
+  
+.row.takeaway
+  .col-xs-12.text-center
+    %h5.editable{ data:{ controller: 'blocks', object_id: @block.id, action: 'edit', attribute: 'takeaway' } }= @block.takeaway || "Takeaway"
