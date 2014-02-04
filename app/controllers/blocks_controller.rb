@@ -1,6 +1,6 @@
 class BlocksController < ApplicationController
   before_action :set_canvas
-  before_action :set_block, only: [:show, :edit, :update, :destroy]
+  before_action :set_block, only: [:show, :edit, :update, :destroy, :move_up]
   before_action :which_attribute, only: [:edit]
   # GET /blocks
   # GET /blocks.json
@@ -59,6 +59,11 @@ class BlocksController < ApplicationController
         format.json { render json: @block.errors, status: :unprocessable_entity }
       end
     end
+  end
+  
+  def move_up
+    @block.move_up!
+    redirect_to :root
   end
 
   # DELETE /blocks/1
