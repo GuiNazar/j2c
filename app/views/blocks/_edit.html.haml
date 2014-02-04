@@ -1,6 +1,6 @@
 .row.title
   .col-xs-12.text-center
-    %h2.editable{data:{controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'title'}}= @block.title
+    %h3.editable{data:{controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'title'}}= @block.title
 
 .row.keypoints
   .col-xs-12
@@ -14,5 +14,6 @@
             %span.glyphicon.glyphicon-plus
   
 .row.takeaway
+  Takeaway
   .col-xs-12.text-center
-    %h5.editable{ data:{ controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'takeaway' } }= @block.takeaway || "Takeaway"
+    %h2.editable{ data:{ controller: 'blocks', object_id: @block.id, action: 'edit_attributes', attribute: 'takeaway' } }= @block.takeaway || "Takeaway"

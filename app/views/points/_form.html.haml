@@ -1,10 +1,10 @@
-.col-xs-10
+.col-xs-11
   = form_for [@block, @point], remote: true do |f|
     .row
-      .col-xs-10
+      .col-xs-11
         = f.text_area :content, class: "keypoint-content"
-      .col-xs-2
+      .col-xs-1
         = f.submit 'Save', class: "btn btn-primary"
-.col-xs-2
+.col-xs-1
   = link_to block_point_path(@block, @point), method: :delete, remote: true, class: "btn btn-danger" do
     %span.glyphicon.glyphicon-minus
