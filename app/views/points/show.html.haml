@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Content:
+  = @point.content
+%p
+  %b Block:
+  = @point.block
+
+= link_to 'Edit', edit_point_path(@point)
+\|
+= link_to 'Back', points_path
